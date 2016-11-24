@@ -12,6 +12,12 @@ public class SwapColorsPeriodically : MonoBehaviour {
 
 	// Use this for initialization
 	void Start() {
+		curves.redChannel.MoveKey(0, new Keyframe(0, 0));
+		curves.redChannel.MoveKey(1, new Keyframe(1, 1));
+		curves.greenChannel.MoveKey(0, new Keyframe(0, 0));
+		curves.greenChannel.MoveKey(1, new Keyframe(1, 1));
+		curves.blueChannel.MoveKey(0, new Keyframe(0, 0));
+		curves.blueChannel.MoveKey(1, new Keyframe(1, 1));
 		StartCoroutine(BeginSwap(true));
 	}
 
