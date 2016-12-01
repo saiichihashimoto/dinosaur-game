@@ -3,6 +3,8 @@ using System.Collections;
 
 public class JumpAndDuck : MonoBehaviour {
 	public GameObject ground = null;
+	public AudioSource jumpAudioSource = null;
+	public AudioClip jumpAudioClip = null;
 	public float jumpMagnitude = 1;
 	private bool grounded = true;
 	private bool ducking = false;
@@ -47,6 +49,9 @@ public class JumpAndDuck : MonoBehaviour {
 		}
 
 		stand();
+		if (jumpAudioSource && jumpAudioClip) {
+			jumpAudioSource.PlayOneShot(jumpAudioClip, 1);
+		}
 		GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpMagnitude, ForceMode2D.Impulse);
 		grounded = false;
 

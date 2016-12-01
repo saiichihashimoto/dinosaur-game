@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class HitObstacles : MonoBehaviour {
+	public AudioSource audioSource = null;
+	public AudioClip audioClip = null;
 	private bool stop = false;
 
 	void Update() {
@@ -14,6 +16,9 @@ public class HitObstacles : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D collider) {
+		if (audioSource && audioClip) {
+			audioSource.PlayOneShot(audioClip, 1);
+		}
 		Time.timeScale = 0;
 		stop = true;
 	}
