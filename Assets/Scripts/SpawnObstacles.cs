@@ -12,7 +12,7 @@ public class SpawnObstacles : MonoBehaviour {
 	}
 
 	private IEnumerator SpawnObstacle() {
-		GameObject obstacle = (GameObject) Instantiate(level.obstacles[Random.Range(0, level.obstacles.Length - 1)]);
+		GameObject obstacle = (GameObject) Instantiate(level.obstacles[Random.Range(0, level.obstacles.Length)]);
 		obstacle.transform.position = new Vector3(transform.localScale.x/2, transform.position.y, 0);
 		obstacle.GetComponent<MoveConstantly>().level = level;
 
