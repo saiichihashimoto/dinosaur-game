@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class SpawnObstacles : MonoBehaviour {
-	public GameObject[] obstacles;
-	public Vector3 initialPosition = Vector3.right;
+	public Level level = null;
 	public float minimumSpawnTime = 1;
 	public float maximumSpawnTime = 1;
 
@@ -13,8 +12,9 @@ public class SpawnObstacles : MonoBehaviour {
 	}
 
 	private IEnumerator SpawnObstacle() {
-		GameObject obstacle = (GameObject) Instantiate(obstacles[Random.Range(0, obstacles.Length - 1)]);
-		obstacle.transform.position = initialPosition;
+		GameObject obstacle = (GameObject) Instantiate(level.obstacles[Random.Range(0, level.obstacles.Length - 1)]);
+		obstacle.transform.position = new Vector3(transform.localScale.x/2, transform.position.y, 0);
+		obstacle.GetComponent<MoveConstantly>().level = level;
 
 		yield return new WaitForSeconds(minimumSpawnTime + Random.value * (maximumSpawnTime - minimumSpawnTime));
 		StartCoroutine(SpawnObstacle());

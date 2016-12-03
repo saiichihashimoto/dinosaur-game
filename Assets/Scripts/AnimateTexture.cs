@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class AnimateTexture : MonoBehaviour {
+	public Level level = null;
 	public Renderer renderer = null;
 	public Vector2 direction = Vector2.up;
-	public float movementSpeed = 1;
+	public float speedMultiplier = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,6 @@ public class AnimateTexture : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		renderer.material.mainTextureOffset += direction.normalized * Time.deltaTime * movementSpeed / transform.localScale.x * renderer.material.mainTextureScale.x;
+		renderer.material.mainTextureOffset += direction.normalized * Time.deltaTime * level.mainSpeed * speedMultiplier * renderer.material.mainTextureScale.x / transform.localScale.x;
 	}
 }

@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class MoveConstantly : MonoBehaviour {
-	public float movementSpeed = 1;
+	public Level level = null;
+	public float speedMultiplier = 1;
 
 	void Update() {
-		transform.position += Vector3.left * Time.deltaTime * movementSpeed;
+		transform.position += Vector3.left * Time.deltaTime * level.mainSpeed * speedMultiplier;
 	}
 }
