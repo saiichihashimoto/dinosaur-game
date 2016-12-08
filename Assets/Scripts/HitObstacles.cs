@@ -5,7 +5,12 @@ using System.Collections;
 public class HitObstacles : MonoBehaviour {
 	public AudioSource audioSource = null;
 	public AudioClip audioClip = null;
+	private Animator animator;
 	private bool stop = false;
+
+	void Start() {
+		animator = GetComponent<Animator>();
+	}
 
 	void Update() {
 		if (!stop || !Input.anyKeyDown) {
@@ -21,5 +26,6 @@ public class HitObstacles : MonoBehaviour {
 		}
 		Time.timeScale = 0;
 		stop = true;
+		animator.SetTrigger("hit");
 	}
 }

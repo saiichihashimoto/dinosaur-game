@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: dc29fcfc7c6c443f99f3522080c85336
+timeCreated: 1481159389
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: restart
+    21300002: cloud
+    21300004: bird__flap_down
+    21300006: bird__flap_up
+    21300008: dinosaur
+    21300010: dinosaur__eyes_closed
+    21300012: dinosaur__step_left
+    21300014: dinosaur__step_right
+    21300016: dinosaur__eyes_wide
+    21300018: dinosaur__ducking_step_right
+    21300020: dinosaur__ducking_step_left
+    21300022: cactus__big
+    21300024: cactus__big_two
+    21300026: cactus__big_four
+    21300028: cactus__small
+    21300030: cactus__small_two
+    21300032: cactus__small_three
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 46
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: restart
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 65
+        width: 70
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cloud
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 101
+        width: 92
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bird__flap_down
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 49
+        width: 90
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bird__flap_up
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 69
+        width: 90
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dinosaur
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 35
+        width: 86
+        height: 92
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dinosaur__eyes_closed
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 35
+        width: 86
+        height: 92
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dinosaur__step_left
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 35
+        width: 86
+        height: 92
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dinosaur__step_right
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 35
+        width: 86
+        height: 92
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dinosaur__eyes_wide
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 35
+        width: 86
+        height: 92
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dinosaur__ducking_step_right
+      rect:
+        serializedVersion: 2
+        x: 2204
+        y: 35
+        width: 116
+        height: 58
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dinosaur__ducking_step_left
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 35
+        width: 116
+        height: 58
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cactus__big
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 29
+        width: 50
+        height: 98
+      alignment: 9
+      pivot: {x: 0.5, y: 0.039516527}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cactus__big_two
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 29
+        width: 100
+        height: 98
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03951653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cactus__big_four
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 29
+        width: 150
+        height: 98
+      alignment: 9
+      pivot: {x: 0.5, y: 0.03951653}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cactus__small
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 59
+        width: 32
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cactus__small_two
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 59
+        width: 66
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cactus__small_three
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 59
+        width: 100
+        height: 68
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

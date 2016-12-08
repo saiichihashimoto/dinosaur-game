@@ -6,8 +6,19 @@ public class JumpAndDuck : MonoBehaviour {
 	public AudioSource jumpAudioSource = null;
 	public AudioClip jumpAudioClip = null;
 	public float jumpMagnitude = 1;
+	private Animator animator;
+	private BoxCollider2D collider;
+	private Vector2 initialColliderOffset;
+	private Vector2 initialColliderSize;
 	private bool grounded = true;
 	private bool ducking = false;
+
+	void Start() {
+		animator = GetComponent<Animator>();
+		collider = GetComponent<BoxCollider2D>();
+		initialColliderOffset = collider.offset;
+		initialColliderSize = collider.size;
+	}
 
 	void Update() {
 		if (!grounded) {
@@ -33,6 +44,7 @@ public class JumpAndDuck : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject == ground) {
 			grounded = true;
+			animator.SetBool("jumping", false);
 		}
 	}
 
@@ -40,6 +52,7 @@ public class JumpAndDuck : MonoBehaviour {
 	void OnCollisionExit2D(Collision2D collision) {
 		if (collision.gameObject == ground) {
 			grounded = false;
+			animator.SetBool("jumping", true);
 		}
 	}
 
@@ -54,6 +67,7 @@ public class JumpAndDuck : MonoBehaviour {
 		}
 		GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpMagnitude, ForceMode2D.Impulse);
 		grounded = false;
+		animator.SetBool("jumping", true);
 
 	}
 
@@ -62,8 +76,10 @@ public class JumpAndDuck : MonoBehaviour {
 			return;
 		}
 
-		transform.localScale = new Vector3(1.5f, 0.5f, 1f);
+		collider.offset = new Vector2(1.265f, 0.625f);
+		collider.size = new Vector2(2.53f, 1.25f);
 		ducking = true;
+		animator.SetBool("ducking", true);
 	}
 
 	void stand() {
@@ -71,7 +87,9 @@ public class JumpAndDuck : MonoBehaviour {
 			return;
 		}
 
-		transform.localScale = new Vector3(1f, 1f, 1f);
+		collider.offset = initialColliderOffset;
+		collider.size = initialColliderSize;
 		ducking = false;
+		animator.SetBool("ducking", false);
 	}
 }
