@@ -76,8 +76,8 @@ public class JumpAndDuck : MonoBehaviour {
 			return;
 		}
 
-		collider.offset = new Vector2(1.265f, 0.625f);
-		collider.size = new Vector2(2.53f, 1.25f);
+		collider.offset = new Vector2(1.298f, 0.625f);
+		collider.size = new Vector2(2.38f, 1.07f);
 		ducking = true;
 		animator.SetBool("ducking", true);
 	}
