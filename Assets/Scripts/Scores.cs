@@ -13,7 +13,7 @@ public class Scores : MonoBehaviour {
 
 	void Update() {
 		int before = (int) (currentScore / 100);
-		currentScore = currentScore + Time.deltaTime * pointsPerSecond;
+		currentScore += Time.deltaTime * pointsPerSecond;
 		int after = (int) (currentScore / 100);
 		if (audioSource && audioClip && before != after) {
 			audioSource.PlayOneShot(audioClip, 1);
