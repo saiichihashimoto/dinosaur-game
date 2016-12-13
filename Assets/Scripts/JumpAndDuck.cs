@@ -3,21 +3,19 @@ using System.Collections;
 
 public class JumpAndDuck : MonoBehaviour {
 	public GameObject ground = null;
+	public Collider2D standingCollider = null;
+	public Collider2D duckingCollider = null;
 	public AudioSource jumpAudioSource = null;
 	public AudioClip jumpAudioClip = null;
 	public float jumpMagnitude = 1;
 	private Animator animator;
-	private BoxCollider2D collider;
-	private Vector2 initialColliderOffset;
-	private Vector2 initialColliderSize;
 	private bool grounded = true;
 	private bool ducking = false;
 
 	void Start() {
 		animator = GetComponent<Animator>();
-		collider = GetComponent<BoxCollider2D>();
-		initialColliderOffset = collider.offset;
-		initialColliderSize = collider.size;
+		standingCollider.enabled = true;
+		duckingCollider.enabled = false;
 	}
 
 	void Update() {
@@ -76,8 +74,8 @@ public class JumpAndDuck : MonoBehaviour {
 			return;
 		}
 
-		collider.offset = new Vector2(1.298f, 0.625f);
-		collider.size = new Vector2(2.38f, 1.07f);
+		standingCollider.enabled = false;
+		duckingCollider.enabled = true;
 		ducking = true;
 		animator.SetBool("ducking", true);
 	}
@@ -87,8 +85,8 @@ public class JumpAndDuck : MonoBehaviour {
 			return;
 		}
 
-		collider.offset = initialColliderOffset;
-		collider.size = initialColliderSize;
+		standingCollider.enabled = true;
+		duckingCollider.enabled = false;
 		ducking = false;
 		animator.SetBool("ducking", false);
 	}
