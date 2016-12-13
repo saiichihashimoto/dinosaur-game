@@ -3,20 +3,30 @@ using System.Collections;
 
 public class SpawnObstacles : MonoBehaviour {
 	public Level level = null;
-	public float minimumSpawnTime = 1;
-	public float maximumSpawnTime = 1;
+	public float minimumSpawnDistance = 1;
+	public float maximumSpawnDistance = 1;
+	private float distance = 0;
+	private float spawnAt = 0;
 
-	// Use this for initialization
 	void Start() {
-		StartCoroutine(SpawnObstacle());
+		distance = 0f;
+		spawnAt = (minimumSpawnDistance + Random.value * (maximumSpawnDistance - minimumSpawnDistance));
 	}
 
-	private IEnumerator SpawnObstacle() {
+	void Update() {
+		distance += Time.deltaTime * level.mainSpeed;
+		if (distance < spawnAt) {
+			return;
+		}
+		SpawnObstacle();
+	}
+
+	private void SpawnObstacle() {
 		GameObject obstacle = (GameObject) Instantiate(level.obstacles[Random.Range(0, level.obstacles.Length)]);
 		obstacle.transform.position = new Vector3(transform.localScale.x/2, transform.position.y, 0);
 		obstacle.GetComponent<MoveConstantly>().level = level;
 
-		yield return new WaitForSeconds(minimumSpawnTime + Random.value * (maximumSpawnTime - minimumSpawnTime));
-		StartCoroutine(SpawnObstacle());
+		distance = 0f;
+		spawnAt = (minimumSpawnDistance + Random.value * (maximumSpawnDistance - minimumSpawnDistance));
 	}
 }
