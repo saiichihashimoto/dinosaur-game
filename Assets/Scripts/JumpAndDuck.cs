@@ -2,15 +2,18 @@
 using System.Collections;
 
 public class JumpAndDuck : MonoBehaviour {
+	public Level level = null;
 	public GameObject ground = null;
 	public Collider2D standingCollider = null;
 	public Collider2D duckingCollider = null;
 	public AudioSource jumpAudioSource = null;
 	public AudioClip jumpAudioClip = null;
-	public float jumpMagnitude = 1;
 	private Animator animator;
 	private bool grounded = true;
 	private bool ducking = false;
+	private float jumpVelocity = 0f;
+	private float gravity = 2.4f;
+	private Vector3 startVector;
 
 	void Start() {
 		animator = GetComponent<Animator>();
@@ -19,29 +22,32 @@ public class JumpAndDuck : MonoBehaviour {
 	}
 
 	void Update() {
-		if (!grounded) {
-			return;
-		}
-
-		if (Input.GetButton("Jump")) {
-			jump();
-			return;
-		}
-
-		float vertical = Input.GetAxis("Vertical");
-
-		if (vertical > 0) {
-			jump();
-		} else if (vertical < 0) {
-			duck();
+		if (grounded) {
+			if (Input.GetButton("Jump") || Input.GetAxis("Vertical") > 0) {
+				jump();
+			} else if (Input.GetAxis("Vertical") < 0) {
+				duck();
+			} else {
+				stand();
+			}
 		} else {
-			stand();
+			transform.position += jumpVelocity * Vector3.up * Time.deltaTime;
+			jumpVelocity -= gravity;
+
+			if (transform.position.y < ground.transform.position.y) {
+				grounded = true;
+				transform.position = startVector;
+				animator.SetBool("jumping", false);
+			} else if (3 < transform.position.y && 20 < jumpVelocity) {
+				jumpVelocity = 20;
+			}
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject == ground) {
 			grounded = true;
+			transform.position = startVector;
 			animator.SetBool("jumping", false);
 		}
 	}
@@ -63,7 +69,8 @@ public class JumpAndDuck : MonoBehaviour {
 		if (jumpAudioSource && jumpAudioClip) {
 			jumpAudioSource.PlayOneShot(jumpAudioClip, 1);
 		}
-		GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpMagnitude, ForceMode2D.Impulse);
+		startVector = transform.position;
+		jumpVelocity = 40f + level.mainSpeed / 10f;
 		grounded = false;
 		animator.SetBool("jumping", true);
 
