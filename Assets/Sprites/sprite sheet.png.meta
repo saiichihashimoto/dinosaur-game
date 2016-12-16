@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc29fcfc7c6c443f99f3522080c85336
-timeCreated: 1481668170
+timeCreated: 1481885526
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -22,6 +22,14 @@ TextureImporter:
     21300030: cactus__small_two
     21300032: cactus__small_three
     21300034: terrain
+    21300036: moon__5
+    21300038: moon__4
+    21300040: moon__2
+    21300042: sprite sheet_5
+    21300044: moon__1
+    21300046: moon__3
+    21300048: moon__6
+    21300050: moon__7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -301,6 +309,97 @@ TextureImporter:
         height: 26
       alignment: 9
       pivot: {x: 0.5, y: 0.6947328}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon__5
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 47
+        width: 40
+        height: 82
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon__4
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 47
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon__2
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 47
+        width: 40
+        height: 82
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon__1
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 47
+        width: 40
+        height: 82
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon__3
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 47
+        width: 40
+        height: 82
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon__6
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 47
+        width: 40
+        height: 82
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: moon__7
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 47
+        width: 40
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
