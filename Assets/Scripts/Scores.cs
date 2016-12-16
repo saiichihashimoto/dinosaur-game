@@ -14,7 +14,7 @@ public class Scores : MonoBehaviour {
 	void Update() {
 		if (audioSource && audioClip && (int) (level.getDistance() / 100) != lastHundred) {
 			audioSource.PlayOneShot(audioClip, 1);
-			lastHundred = level.getDistance();
+			lastHundred = (int) (level.getDistance() / 100);
 		}
 		score.text = level.getDistance().ToString("00000");
 	}
