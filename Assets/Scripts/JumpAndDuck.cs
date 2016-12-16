@@ -12,7 +12,7 @@ public class JumpAndDuck : MonoBehaviour {
 	private bool grounded = true;
 	private bool ducking = false;
 	private float jumpVelocity = 0f;
-	private float gravity = 2.4f;
+	private float gravity = 144f;
 	private Vector3 startVector;
 
 	void Start() {
@@ -32,7 +32,7 @@ public class JumpAndDuck : MonoBehaviour {
 			}
 		} else {
 			transform.position += jumpVelocity * Vector3.up * Time.deltaTime;
-			jumpVelocity -= gravity;
+			jumpVelocity -= gravity * Time.deltaTime;
 
 			if (transform.position.y < ground.transform.position.y) {
 				grounded = true;
