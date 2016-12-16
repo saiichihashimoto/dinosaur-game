@@ -15,9 +15,6 @@ public class SpawnObstacles : MonoBehaviour {
 		spawnAt = 0f;
 	}
 
-	//  width * level.mainSpeed + minGap * 0.6
-	// (width * level.mainSpeed + minGap * 0.6) * 1.5
-
 	void Update() {
 		distance += Time.deltaTime * level.mainSpeed;
 		if (distance < spawnAt) {
@@ -38,12 +35,11 @@ public class SpawnObstacles : MonoBehaviour {
 
 		GameObject obstacle = (GameObject) Instantiate(level.obstacles[obstacleIndex]);
 		obstacle.transform.position = new Vector3(transform.localScale.x / 2, transform.position.y, 0);
-		obstacle.GetComponent<MoveConstantly>().level = level;
+		obstacle.GetComponent<MoveRelatively>().level = level;
 		obstacle.GetComponent<DestroyOnLeftEdge>().ground = gameObject;
 
 		float minimumSpawnDistance = obstacle.GetComponent<Collider2D>().bounds.size.x * level.mainSpeed / 4 + obstacle.GetComponent<ObstacleStuff>().minGap * 0.6f;
 		spawnAt = minimumSpawnDistance * (1 + Random.value * 0.5f);
 		distance = 0f;
-		Debug.Log("spawnAt " + minimumSpawnDistance);
 	}
 }

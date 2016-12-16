@@ -18,7 +18,7 @@ public class SpawnClouds : MonoBehaviour {
 	private IEnumerator SpawnObstacle() {
 		GameObject obstacle = (GameObject) Instantiate(cloud);
 		obstacle.transform.position = new Vector3(transform.localScale.x/2, minimumCloudHeight + Random.value * (maximumCloudHeight - minimumCloudHeight), 0);
-		obstacle.GetComponent<MoveConstantly>().level = level;
+		obstacle.GetComponent<MoveRelatively>().level = level;
 		obstacle.GetComponent<DestroyOnLeftEdge>().ground = gameObject;
 
 		yield return new WaitForSeconds(minimumSpawnTime + Random.value * (maximumSpawnTime - minimumSpawnTime));
