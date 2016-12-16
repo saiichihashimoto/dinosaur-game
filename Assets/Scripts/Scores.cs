@@ -3,22 +3,20 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class Scores : MonoBehaviour {
+	public Level level = null;
 	public AudioSource audioSource = null;
 	public AudioClip audioClip = null;
 	public Text score = null;
 	public Text highScore = null;
-	public float pointsPerSecond = 100;
-	private float currentScore = 1;
+	private float lastHundred = 0;
 	private static float highestScore = 0;
 
 	void Update() {
-		int before = (int) (currentScore / 100);
-		currentScore += Time.deltaTime * pointsPerSecond;
-		int after = (int) (currentScore / 100);
-		if (audioSource && audioClip && before != after) {
+		if (audioSource && audioClip && (int) (level.getDistance() / 100) != lastHundred) {
 			audioSource.PlayOneShot(audioClip, 1);
+			lastHundred = level.getDistance();
 		}
-		score.text = currentScore.ToString("00000");
+		score.text = level.getDistance().ToString("00000");
 	}
 
 	void Awake() {
@@ -26,6 +24,6 @@ public class Scores : MonoBehaviour {
 	}
 
 	void OnDestroy() {
-		highestScore = Mathf.Max(currentScore, highestScore);
+		highestScore = Mathf.Max(level.getDistance(), highestScore);
 	}
 }
