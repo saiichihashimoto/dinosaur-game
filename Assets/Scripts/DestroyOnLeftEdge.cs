@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class DestroyOnLeftEdge : MonoBehaviour {
-	public float leftEdgeX = 0;
+	public GameObject ground = null;
 
 	void Start () {
 	}
 
 	void Update () {
-		if (transform.position.x > leftEdgeX) {
+		if (transform.position.x > -ground.transform.localScale.x / 2) {
 			return;
 		}
 		Destroy(gameObject);

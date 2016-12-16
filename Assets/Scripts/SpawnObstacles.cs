@@ -23,8 +23,9 @@ public class SpawnObstacles : MonoBehaviour {
 
 	private void SpawnObstacle() {
 		GameObject obstacle = (GameObject) Instantiate(level.obstacles[Random.Range(0, level.obstacles.Length)]);
-		obstacle.transform.position = new Vector3(transform.localScale.x/2, transform.position.y, 0);
+		obstacle.transform.position = new Vector3(transform.localScale.x / 2, transform.position.y, 0);
 		obstacle.GetComponent<MoveConstantly>().level = level;
+		obstacle.GetComponent<DestroyOnLeftEdge>().ground = gameObject;
 
 		distance = 0f;
 		spawnAt = (minimumSpawnDistance + Random.value * (maximumSpawnDistance - minimumSpawnDistance));
