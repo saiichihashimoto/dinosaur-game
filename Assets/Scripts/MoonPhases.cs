@@ -8,15 +8,19 @@ public class MoonPhases : MonoBehaviour {
 	private int phase = 0;
 	private bool isNight = false;
 
-	void Start () {
-		phase = sprites.Length - 1;
-		renderer.sprite = sprites[phase];
+	void Start() {
+		if (sprites.Length > 0) {
+			phase = sprites.Length - 1;
+			renderer.sprite = sprites[phase];
+		}
 	}
 
-	void Update () {
-		if (!isNight && timeOfDay.isNight()) {
-			phase = (phase + 1) % sprites.Length;
-			renderer.sprite = sprites[phase];
+	void Update() {
+		if (sprites.Length > 0) {
+			if (!isNight && timeOfDay.isNight()) {
+				phase = (phase + 1) % sprites.Length;
+				renderer.sprite = sprites[phase];
+			}
 		}
 		isNight = timeOfDay.isNight();
 		renderer.color = new Color(1f, 1f, 1f, timeOfDay.value());

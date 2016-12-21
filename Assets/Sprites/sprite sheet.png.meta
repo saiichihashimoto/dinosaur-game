@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc29fcfc7c6c443f99f3522080c85336
-timeCreated: 1481886420
+timeCreated: 1482285725
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -30,6 +30,9 @@ TextureImporter:
     21300046: moon__3
     21300048: moon__6
     21300050: moon__7
+    21300052: star__2
+    21300054: star__3
+    21300056: star__1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -400,6 +403,45 @@ TextureImporter:
         height: 80
       alignment: 5
       pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: star__2
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 75
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: star__3
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 93
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: star__1
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 111
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
