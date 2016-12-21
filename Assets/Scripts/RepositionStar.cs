@@ -7,9 +7,6 @@ public class RepositionStar : MonoBehaviour {
 	public float maximumStart = 500f;
 	private bool isNight = false;
 
-	void Start () {
-	}
-	
 	void Update () {
 		if (!isNight && timeOfDay.isNight()) {
 			transform.position = new Vector3(minimumStart + Random.value * (maximumStart - minimumStart), 0.3333333333f + Random.value * 4.6666666667f, 0f);

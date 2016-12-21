@@ -10,7 +10,6 @@ public class SpawnClouds : MonoBehaviour {
 	public float minimumCloudHeight = 1;
 	public float maximumCloudHeight = 1;
 
-	// Use this for initialization
 	void Start() {
 		StartCoroutine(SpawnObstacle());
 	}
