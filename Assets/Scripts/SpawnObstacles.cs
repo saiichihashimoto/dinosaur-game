@@ -3,8 +3,6 @@ using System.Collections;
 
 public class SpawnObstacles : MonoBehaviour {
 	public Level level = null;
-	public float minimumSpawnDistance = 1;
-	public float maximumSpawnDistance = 1;
 	private float distance = 0;
 	private float spawnAt = 0;
 	private string[] obstacleHistory = new string[]{null, null};
@@ -38,7 +36,7 @@ public class SpawnObstacles : MonoBehaviour {
 		obstacle.GetComponent<MoveRelatively>().level = level;
 		obstacle.GetComponent<DestroyOnLeftEdge>().ground = gameObject;
 
-		float minimumSpawnDistance = obstacle.GetComponent<Collider2D>().bounds.size.x * level.mainSpeed / 4 + obstacle.GetComponent<ObstacleStuff>().minGap * 0.6f;
+		float minimumSpawnDistance = obstacle.GetComponent<Collider2D>().bounds.size.x * level.mainSpeed / 4.0f + obstacle.GetComponent<ObstacleStuff>().minGap * 0.6f;
 		spawnAt = minimumSpawnDistance * (1 + Random.value * 0.5f);
 		distance = 0f;
 	}
