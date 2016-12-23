@@ -31,6 +31,5 @@ public class SpawnClouds : MonoBehaviour {
 
 		spawnAt = (3 + 100 + Random.value * 300) * 4;
 		distance = 0f;
-		Debug.Log("spawn at " + spawnAt);
 	}
 }
