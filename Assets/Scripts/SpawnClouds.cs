@@ -5,22 +5,32 @@ public class SpawnClouds : MonoBehaviour {
 	public Level level = null;
 	public GameObject ground = null;
 	public GameObject cloud = null;
-	public float minimumSpawnTime = 1;
-	public float maximumSpawnTime = 1;
 	public float minimumCloudHeight = 1;
 	public float maximumCloudHeight = 1;
+	private float distance = 0;
+	private float spawnAt = 0;
 
 	void Start() {
-		StartCoroutine(SpawnObstacle());
+		distance = 0f;
+		spawnAt = 0f;
 	}
 
-	private IEnumerator SpawnObstacle() {
+	void Update() {
+		distance += Time.deltaTime * level.mainSpeed;
+		if (distance < spawnAt) {
+			return;
+		}
+		SpawnCloud();
+	}
+
+	private void SpawnCloud() {
 		GameObject obstacle = (GameObject) Instantiate(cloud);
-		obstacle.transform.position = new Vector3(transform.localScale.x/2, minimumCloudHeight + Random.value * (maximumCloudHeight - minimumCloudHeight), 0);
+		obstacle.transform.position = new Vector3(transform.localScale.x / 2, minimumCloudHeight + Random.value * (maximumCloudHeight - minimumCloudHeight), 0);
 		obstacle.GetComponent<MoveRelatively>().level = level;
 		obstacle.GetComponent<DestroyOnLeftEdge>().ground = gameObject;
 
-		yield return new WaitForSeconds(minimumSpawnTime + Random.value * (maximumSpawnTime - minimumSpawnTime));
-		StartCoroutine(SpawnObstacle());
+		spawnAt = (3 + 100 + Random.value * 300) * 4;
+		distance = 0f;
+		Debug.Log("spawn at " + spawnAt);
 	}
 }

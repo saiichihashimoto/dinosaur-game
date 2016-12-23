@@ -11,6 +11,6 @@ public class MoveConstantly : MonoBehaviour {
 		if (transform.position.x > restartAt) {
 			return;
 		}
-		transform.position = new Vector3(startAt, transform.position.y, transform.position.z);
+		transform.position += Vector3.right * (startAt - restartAt);
 	}
 }
