@@ -5,6 +5,7 @@ using System.Collections;
 public class HitObstacles : MonoBehaviour {
 	public AudioSource audioSource = null;
 	public AudioClip audioClip = null;
+	public GameObject restart = null;
 	private Animator animator;
 	private bool stop = false;
 
@@ -24,6 +25,7 @@ public class HitObstacles : MonoBehaviour {
 		if (audioSource && audioClip) {
 			audioSource.PlayOneShot(audioClip, 1);
 		}
+		restart.transform.position = Vector3.zero;
 		Time.timeScale = 0;
 		stop = true;
 		animator.SetTrigger("hit");
