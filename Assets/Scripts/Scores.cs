@@ -17,6 +17,7 @@ public class Scores : MonoBehaviour {
 			lastHundred = (int) (level.getDistance() / 100);
 		}
 		score.Value = (int) level.getDistance();
+		highScore.Value = (int) highestScore;
 	}
 
 	void Awake() {
