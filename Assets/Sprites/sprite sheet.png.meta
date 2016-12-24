@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc29fcfc7c6c443f99f3522080c85336
-timeCreated: 1482285725
+timeCreated: 1482613519
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,18 @@ TextureImporter:
     21300052: star__2
     21300054: star__3
     21300056: star__1
+    21300058: HI
+    21300060: Game Over
+    21300062: number__0
+    21300064: number__1
+    21300066: number__2
+    21300068: number__3
+    21300070: number__4
+    21300072: number__5
+    21300074: number__6
+    21300076: number__7
+    21300078: number__8
+    21300080: number__9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -440,6 +452,162 @@ TextureImporter:
         y: 111
         width: 17
         height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: HI
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 107
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Game Over
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 80
+        width: 381
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__0
+      rect:
+        serializedVersion: 2
+        x: 1294
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__1
+      rect:
+        serializedVersion: 2
+        x: 1315
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__2
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__3
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__4
+      rect:
+        serializedVersion: 2
+        x: 1374
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__5
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__6
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__7
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__8
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 107
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: number__9
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 107
+        width: 18
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

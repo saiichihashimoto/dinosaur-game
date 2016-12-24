@@ -6,8 +6,8 @@ public class Scores : MonoBehaviour {
 	public Level level = null;
 	public AudioSource audioSource = null;
 	public AudioClip audioClip = null;
-	public Text score = null;
-	public Text highScore = null;
+	public Number score = null;
+	public Number highScore = null;
 	private float lastHundred = 0;
 	private static float highestScore = 0;
 
@@ -16,11 +16,11 @@ public class Scores : MonoBehaviour {
 			audioSource.PlayOneShot(audioClip, 1);
 			lastHundred = (int) (level.getDistance() / 100);
 		}
-		score.text = level.getDistance().ToString("00000");
+		score.Value = (int) level.getDistance();
 	}
 
 	void Awake() {
-		highScore.text = highestScore.ToString("00000");
+		highScore.Value = (int) highestScore;
 	}
 
 	void OnDestroy() {
