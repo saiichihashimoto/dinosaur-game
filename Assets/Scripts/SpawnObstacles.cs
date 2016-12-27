@@ -23,12 +23,13 @@ public class SpawnObstacles : MonoBehaviour {
 
 	private void SpawnObstacle() {
 		int obstacleIndex;
+		ObstacleStuff obstacleStuff = null;
 		string uniqueName;
 		do {
 			obstacleIndex = Random.Range(0, level.obstacles.Length);
-			uniqueName = level.obstacles[obstacleIndex].GetComponent<ObstacleStuff>().uniqueName;
-		} while (uniqueName == obstacleHistory[0] && uniqueName == obstacleHistory[1]);
-		obstacleHistory[obstacleHistoryIndex] = uniqueName;
+			obstacleStuff = level.obstacles[obstacleIndex].GetComponent<ObstacleStuff>();
+		} while ((obstacleStuff.uniqueName == obstacleHistory[0] && obstacleStuff.uniqueName == obstacleHistory[1]) || obstacleStuff.minSpeed > level.mainSpeed);
+		obstacleHistory[obstacleHistoryIndex] = obstacleStuff.uniqueName;
 		obstacleHistoryIndex = (obstacleHistoryIndex + 1) % 2;
 
 		GameObject obstacle = (GameObject) Instantiate(level.obstacles[obstacleIndex]);
