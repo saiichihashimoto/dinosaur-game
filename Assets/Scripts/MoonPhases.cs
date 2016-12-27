@@ -23,6 +23,6 @@ public class MoonPhases : MonoBehaviour {
 			}
 		}
 		isNight = timeOfDay.isNight();
-		renderer.color = new Color(1f, 1f, 1f, timeOfDay.value());
+		renderer.color = new Color(0.7333333333f, 0.7333333333f, 0.7333333333f, timeOfDay.value());
 	}
 }

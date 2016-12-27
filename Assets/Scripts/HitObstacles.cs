@@ -8,9 +8,12 @@ public class HitObstacles : MonoBehaviour {
 	public GameObject restart = null;
 	private Animator animator;
 	private bool stop = false;
+	private Vector3 restartStartPosition = Vector3.zero;
 
 	void Start() {
 		animator = GetComponent<Animator>();
+		restartStartPosition = restart.transform.position;
+		restart.transform.position = Vector3.up * 50;
 	}
 
 	void Update() {
@@ -25,7 +28,7 @@ public class HitObstacles : MonoBehaviour {
 		if (audioSource && audioClip) {
 			audioSource.PlayOneShot(audioClip, 1);
 		}
-		restart.transform.position = Vector3.zero;
+		restart.transform.position = restartStartPosition;
 		Time.timeScale = 0;
 		stop = true;
 		animator.SetTrigger("hit");
