@@ -1,4 +1,4 @@
-![Chrome's dinosaur game](https://i.ytimg.com/vi/exBNB5njcNA/maxresdefault.jpg)
+![Chrome's dinosaur game](Assets/WebGLTemplates/GithubPagesTemplate/screenshot.png)
 
 # dinosaur-game
 
