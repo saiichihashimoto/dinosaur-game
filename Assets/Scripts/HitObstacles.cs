@@ -32,5 +32,10 @@ public class HitObstacles : MonoBehaviour {
 		Time.timeScale = 0;
 		stop = true;
 		animator.SetTrigger("hit");
+		Animator otherAnimator = collider.gameObject.GetComponent<Animator>();
+		if (otherAnimator == null) {
+			return;
+		}
+		otherAnimator.SetTrigger("hit");
 	}
 }
