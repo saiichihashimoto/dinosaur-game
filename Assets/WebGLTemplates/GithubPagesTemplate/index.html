@@ -1,7 +1,23 @@
 <html i18n-values="dir:textdirection;lang:language" dir="ltr" lang="en" i18n-processed=""><head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0,
-                                 maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="msapplication-TileColor" content="#f7f7f7">
+  <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+  <meta name="theme-color" content="#f7f7f7">
   <title i18n-content="title">%UNITY_WEB_NAME%</title>
   <style>/* Copyright 2014 The Chromium Authors. All rights reserved.
    Use of this source code is governed by a BSD-style license that can be
@@ -1146,12 +1162,12 @@ html[subframe] body {
     <div id="main-content" jstcache="0">
       <div class="icon icon-offline" jseval="updateIconClass(this.classList, iconClass)" jstcache="1" style="visibility: hidden;"></div>
       <div id="main-message" jstcache="0">
-        <h1 jsselect="heading" jsvalues=".innerHTML:msg" jstcache="5">There is no Internet connection</h1>
-        <p jsselect="summary" jsvalues=".innerHTML:msg" jstcache="2">There is no Internet connection</p>
+        <h1 jsselect="heading" jsvalues=".innerHTML:msg" jstcache="5">There is an Internet connection</h1>
+        <p jsselect="summary" jsvalues=".innerHTML:msg" jstcache="2">There is an Internet connection</p>
         <div id="suggestions-list" jsdisplay="(suggestionsSummaryList &amp;&amp; suggestionsSummaryList.length)" jstcache="6">
           <p jsvalues=".innerHTML:suggestionsSummaryListHeader" jstcache="13">Try:</p>
           <ul jsvalues=".className:suggestionsSummaryList.length == 1 ? 'single-suggestion' : ''" jstcache="14" class="">
-            <li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="15" jsinstance="0">Checking the network cables, modem, and router</li><li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="15" jsinstance="1">Reconnecting to Wi-Fi</li><li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="15" jsinstance="*2"><a href="javascript:diagnoseErrors()" id="diagnose-link" jstcache="0">Running Network Diagnostics</a></li>
+            <li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="15" jsinstance="0">Using the up and down keys.</li><li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="15" jsinstance="1">Dodging everything.</li><li jsselect="suggestionsSummaryList" jsvalues=".innerHTML:summary" jstcache="15" jsinstance="*2"><a href="http://github.com/saiichihashimoto/dinosaur-game" id="diagnose-link" jstcache="0">Browsing the github repository.</a></li>
           </ul>
         </div>
         <div class="error-code" jscontent="errorCode" jstcache="7">ERR_INTERNET_DISCONNECTED</div>
@@ -1177,5 +1193,6 @@ html[subframe] body {
       <canvas class="runner-canvas" id="canvas" oncontextmenu="event.preventDefault()" height="%UNITY_HEIGHT%px" width="%UNITY_WIDTH%px"></canvas>
     </div>
   </div>
+  <a href="https://github.com/saiichihashimoto/dinosaur-game" target="_blank"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
   %UNITY_WEBGL_LOADER_GLUE%
 </body></html>
