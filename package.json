@@ -1,0 +1,27 @@
+{
+  "name": "dinosaur-game",
+  "homepage": "http://saiichihashimoto.com/dinosaur-game",
+  "bugs": {
+    "url": "https://github.com/saiichihashimoto/dinosaur-game/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saiichihashimoto/dinosaur-game.git"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "run-s build:*",
+    "build:www": "echo no build",
+    "clean": "rm -rf Build",
+    "release": "run-s release:*",
+    "release:www": "gh-pages --dist Build"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.11.0",
+    "npm-run-all": "^3.1.1"
+  },
+  "engines": {
+    "node": "^6.1.0",
+    "npm": "^3.9.0"
+  }
+}
